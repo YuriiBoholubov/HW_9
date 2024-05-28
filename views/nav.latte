@@ -5,8 +5,18 @@
     <a href="/about" class="w3-bar-item">
         ABOUT
     </a>
-    <a href="/contact" class="w3-bar-item">
+    <a href="/contacts" class="w3-bar-item">
         CONTACTS
     </a>
-</nav>
 
+    {if $isUserLoggedIn}
+        <a href="/logout" class="w3-bar-item w3-right">
+            LOGOUT
+        </a>
+    {else}
+        <a href="/login" class="w3-bar-item w3-right">
+            LOGIN
+        </a>
+    {/if}
+
+</nav>

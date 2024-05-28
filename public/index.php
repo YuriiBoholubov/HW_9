@@ -8,9 +8,7 @@ session_start();
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$db = new PDO('sqlite:' . __DIR__ . '/database.db');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+$db = new \Iplague\Project\Database();
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
