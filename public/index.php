@@ -15,8 +15,10 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $homeController = new Iplague\Project\Controllers\HomeController();
     $aboutController = new Iplague\Project\Controllers\AboutController();
     $contactsController = new Iplague\Project\Controllers\ContactsController();
+    // контролер для сторінки входу
     $loginController = new Iplague\Project\Controllers\LoginController();
 
+    //  middleware для перевірки авторизації
     $authMiddleware = new \Iplague\Project\AuthMiddleware();
 
     $r->addRoute('GET', '/', [$homeController, 'index']);
